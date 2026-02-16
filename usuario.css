@@ -1,0 +1,115 @@
+/* RESET GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* FONDO GENERAL */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* CONTENEDOR */
+.perfil-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* TARJETA */
+.perfil-card {
+  background: #fff;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+/* HEADER */
+.perfil-header {
+  background: #1e1e1e;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* AVATAR */
+.avatar {
+  width: 90px;
+  height: 90px;
+  background: #2ecc71;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px;
+  font-size: 36px;
+  color: #000;
+}
+
+/* TEXTO */
+.perfil-header h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.perfil-header p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* OPCIONES */
+.perfil-opciones {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* BOTONES */
+.btn {
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn i {
+  font-size: 16px;
+}
+
+.btn:hover {
+  transform: scale(1.04);
+  opacity: 0.9;
+}
+
+/* COLORES */
+.verde {
+  background: #2ecc71;
+  color: #000;
+}
+
+.azul {
+  background: #3498db;
+  color: #fff;
+}
+
+.rojo {
+  background: #e74c3c;
+  color: #fff;
+}
