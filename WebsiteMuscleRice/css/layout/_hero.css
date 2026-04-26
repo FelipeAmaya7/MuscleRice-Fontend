@@ -1,0 +1,150 @@
+/**
+ * _hero.css
+ *
+ * Estilos para la sección hero de MuscleRice.
+ * Usa Design Tokens para consistencia.
+ */
+
+/* ==========================================================================
+   SLIDER / HERO
+   ========================================================================== */
+
+.slider {
+    position: relative;
+}
+
+.slider img {
+    height: var(--mr-product-img-height);
+    width: 100%;
+    object-fit: cover;
+}
+
+.slider h3 {
+    color: var(--mr-header-text);
+    font-family: var(--mr-font-primary);
+    font-size: 61px;
+    font-weight: var(--mr-font-bold);
+    left: 30%;
+    position: absolute;
+    top: 45%;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   FEATURES / CARACTERÍSTICAS
+   ========================================================================== */
+
+.features h2 {
+    color: #4f4f4f;
+    font-size: var(--mr-text-4xl);
+    margin: var(--mr-space-10) 0;
+    text-align: center;
+    font-family: var(--mr-font-primary);
+    font-weight: var(--mr-font-normal);
+}
+
+.features .text-img {
+    width: 315px;
+}
+
+.text-img.left {
+    float: left;
+}
+
+.text-img.center {
+    margin: 0 auto;
+}
+
+.text-img.right {
+    float: right;
+}
+
+.features h3 {
+    color: #4f4f4f;
+    font-size: var(--mr-text-2xl);
+    padding: var(--mr-space-5) 0;
+    font-family: var(--mr-font-primary);
+}
+
+.features p {
+    color: var(--mr-text-muted);
+    font-family: var(--mr-font-secondary);
+    font-size: var(--mr-text-sm);
+    font-weight: var(--mr-font-normal);
+}
+
+/* ==========================================================================
+   OUR SKILL (HABILIDADES/PROGRESO)
+   ========================================================================== */
+
+.our_skill h2 {
+    color: #4f4f4f;
+    font-family: var(--mr-font-primary);
+    font-size: var(--mr-text-4xl);
+    font-weight: var(--mr-font-normal);
+    margin: var(--mr-space-10) 0 var(--mr-space-8);
+}
+
+.our_skill .text {
+    padding-right: 105px;
+}
+
+.our_skill .text p {
+    font-size: var(--mr-text-lg);
+    color: var(--mr-text-muted);
+    line-height: 35px;
+    font-weight: var(--mr-font-normal);
+}
+
+.progress_bar {
+    padding-left: 105px;
+}
+
+.progress_bar p {
+    color: #564f4f;
+    margin: 0 0 var(--mr-space-3);
+    font-size: var(--mr-text-lg);
+}
+
+/* ==========================================================================
+   HERO RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: var(--mr-bp-lg)) {
+    .slider h3 {
+        font-size: var(--mr-text-4xl);
+        left: 15%;
+    }
+
+    .slider img {
+        height: 350px;
+    }
+
+    .features .text-img {
+        width: 100%;
+        float: none;
+        margin-bottom: var(--mr-space-5);
+    }
+
+    .text-img.center {
+        margin: 0 auto var(--mr-space-5);
+    }
+
+    .our_skill .text,
+    .progress_bar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: var(--mr-bp-md)) {
+    .slider h3 {
+        font-size: var(--mr-text-2xl);
+        left: 10%;
+        top: 30%;
+    }
+
+    .slider img {
+        height: 250px;
+    }
+}

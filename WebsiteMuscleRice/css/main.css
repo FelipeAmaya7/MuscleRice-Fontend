@@ -1,0 +1,137 @@
+/**
+ * main.css
+ *
+ * ORQUESTADOR PRINCIPAL DE ESTILOS - MuscleRice
+ * =============================================
+ *
+ * Arquitectura CSS Modular basada en Design Tokens.
+ *
+ * CADENA DE IMPORTACIÓN (orden CRÍTICO):
+ *
+ * 1. tokens/_tokens.css     → Define TODAS las variables en :root (Single Source of Truth)
+ * 2. base/_variables.css   → Alias de compatibilidad legacy
+ * 3. components/*         → Componentes UI (botones, cards, inputs)
+ * 4. layout/*             → Estructura de páginas (header, hero, products)
+ *
+ * @version 2.0.0
+ */
+
+/* ==========================================================================
+   1. DESIGN TOKENS - SINGLE SOURCE OF TRUTH
+   ========================================================================== */
+
+@import url('tokens/_tokens.css');
+
+/* ==========================================================================
+   2. BASE / VARIABLES (Alias de compatibilidad)
+   ========================================================================== */
+
+@import url('base/_variables.css');
+
+/* ==========================================================================
+   3. RESET GLOBAL
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--mr-bg-dark);
+    color: var(--mr-text-light);
+    font-family: var(--mr-font-primary);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   4. COMPONENTES
+   ========================================================================== */
+
+@import url('components/_components.css');
+
+/* ==========================================================================
+   5. LAYOUTS
+   ========================================================================== */
+
+@import url('layout/_header.css');
+@import url('layout/_hero.css');
+@import url('layout/_products.css');
+
+/* ==========================================================================
+   6. CONTAINER
+   ========================================================================== */
+
+.container {
+    width: 100%;
+    max-width: var(--mr-container-max);
+    margin: 0 auto;
+    padding-left: var(--mr-container-padding);
+    padding-right: var(--mr-container-padding);
+}
+
+/* ==========================================================================
+   7. UTILITIES
+   ========================================================================== */
+
+/* Tipografía responsiva fluida */
+h1 { font-size: clamp(var(--mr-text-3xl), 4vw, var(--mr-text-5xl)); }
+h2 { font-size: clamp(var(--mr-text-2xl), 3vw, var(--mr-text-4xl)); }
+h3 { font-size: clamp(var(--mr-text-xl), 2.5vw, var(--mr-text-3xl)); }
+p { font-size: clamp(var(--mr-text-sm), 1.5vw, var(--mr-text-base)); }
+
+/* utilities de texto */
+.text-primary { color: var(--mr-color-primary); }
+.text-accent { color: var(--mr-color-accent); }
+.text-muted { color: var(--mr-text-muted); }
+
+/* utilities de fondo */
+.bg-dark { background-color: var(--mr-bg-dark); }
+.bg-light { background-color: var(--mr-bg-light); }
+.bg-primary { background-color: var(--mr-color-primary); }
+
+/* utilities de espaciado */
+.mt-1 { margin-top: var(--mr-space-2); }
+.mt-2 { margin-top: var(--mr-space-4); }
+.mt-3 { margin-top: var(--mr-space-6); }
+.mb-1 { margin-bottom: var(--mr-space-2); }
+.mb-2 { margin-bottom: var(--mr-space-4); }
+.mb-3 { margin-bottom: var(--mr-space-6); }
+
+/* utilities de display */
+.d-flex { display: flex; }
+.align-center { align-items: center; }
+.justify-center { justify-content: center; }
+.gap-1 { gap: var(--mr-space-2); }
+.gap-2 { gap: var(--mr-space-4); }
+
+/* ==========================================================================
+   8. ANIMACIONES GLOBALES
+   ========================================================================== */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}

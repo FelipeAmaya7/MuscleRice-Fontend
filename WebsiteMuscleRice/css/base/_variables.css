@@ -1,0 +1,42 @@
+/**
+ * _variables.css
+ *
+ * ARQUITECTURA Y ESCALABILIDAD:
+ * ===============================
+ * Este archivo ahora sirve como capa de ALIAS para compatibilidad.
+ * Los Design Tokens reales están en ../tokens/_tokens.css (importado por main.css)
+ *
+ * SINGLE SOURCE OF TRUTH: ../tokens/_tokens.css
+ *
+ * HISTÓRICO: Antes este archivo definía las variables directamente.
+ * Ahora delegamos a los tokens y mantenemos aliases para no romper código existente.
+ *
+ * @deprecated Usar directamente --mr-* tokens
+ * @since 2.0.0
+ */
+
+:root {
+    /* Alias para compatibilidad con código legacy - Colores primarios */
+    --primary-color: var(--mr-color-primary);
+    --primary-color-hover: var(--mr-color-primary-hover);
+    --primary-color-active: var(--mr-color-primary-active);
+    --primary-green: var(--mr-green-primary);
+
+    /* Alias para fondos */
+    --bg-dark: var(--mr-bg-dark);
+
+    /* Alias para tipografía legacy */
+    --text-light: #ffffff;
+    --text-muted: #a0a0a0;
+
+    /* Alias para transiciones legacy */
+    --transition-speed: var(--mr-transition-speed);
+    --transition-ease: var(--mr-transition-ease);
+
+    /* Alias para botones legacy (compatibilidad con código existente) */
+    --btn-primary-bg: var(--mr-btn-bg);
+    --btn-primary-text: var(--mr-btn-text);
+    --btn-radius: var(--mr-btn-radius);
+    --btn-hover-shadow: var(--mr-btn-hover-shadow);
+    --btn-transition: var(--mr-btn-transition);
+}

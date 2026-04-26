@@ -1,0 +1,119 @@
+/**
+ * _components.css
+ *
+ * ARQUITECTURA MODULAR:
+ * Este archivo contiene estilos base de componentes del UI.
+ * Los estilos de botones específicos ahora viven en _buttons.css
+ *
+ * Los tokens ya están disponibles porque main.css los importa primero.
+ */
+
+@import url('_buttons.css');
+
+/* ==========================================================================
+   ENLACES GLOBALES
+   ========================================================================== */
+
+a {
+    color: var(--mr-color-primary);
+    text-decoration: none;
+    transition: color var(--mr-transition-speed) var(--mr-transition-ease);
+}
+
+a:hover {
+    color: var(--mr-color-primary-hover);
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid var(--mr-color-primary);
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   CARDS
+   ========================================================================== */
+
+.card {
+    background: var(--mr-bg-card);
+    border-radius: var(--mr-radius-lg);
+    box-shadow: var(--mr-shadow-card);
+    transition: box-shadow var(--mr-transition-speed) var(--mr-transition-ease),
+                transform var(--mr-transition-speed) var(--mr-transition-ease);
+}
+
+.card:hover {
+    box-shadow: var(--mr-shadow-card-hover);
+    transform: translateY(-4px);
+}
+
+.card-img {
+    border-radius: var(--mr-radius-lg) var(--mr-radius-lg) 0 0;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   INPUTS Y FORMULARIOS
+   ========================================================================== */
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: var(--mr-space-3) var(--mr-space-4);
+    font-size: var(--mr-text-base);
+    font-family: var(--mr-font-primary);
+    color: var(--mr-bg-dark);
+    background-color: var(--mr-bg-light);
+    border: 1px solid #dee2e6;
+    border-radius: var(--mr-radius-md);
+    transition: border-color var(--mr-transition-speed) var(--mr-transition-ease),
+                box-shadow var(--mr-transition-speed) var(--mr-transition-ease);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--mr-color-primary);
+    box-shadow: 0 0 0 3px rgba(var(--mr-color-primary-rgb), 0.25);
+}
+
+.form-control::placeholder {
+    color: var(--mr-text-muted);
+}
+
+/* ==========================================================================
+   BADGES Y TAGS
+   ========================================================================== */
+
+.badge {
+    display: inline-block;
+    padding: var(--mr-space-1) var(--mr-space-3);
+    font-size: var(--mr-text-xs);
+    font-weight: var(--mr-font-semibold);
+    border-radius: var(--mr-radius-full);
+}
+
+.badge-primary {
+    background-color: var(--mr-color-primary);
+    color: var(--mr-bg-dark);
+}
+
+.badge-accent {
+    background-color: var(--mr-color-accent);
+    color: var(--mr-bg-dark);
+}
+
+/* ==========================================================================
+   PROGRESS BARS
+   ========================================================================== */
+
+.progress {
+    height: var(--mr-space-2);
+    background-color: #e9ecef;
+    border-radius: var(--mr-radius-full);
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: var(--mr-color-primary);
+    transition: width var(--mr-transition-speed) var(--mr-transition-ease);
+}
