@@ -10,7 +10,7 @@ app.use(express.json());
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const frontendDir = path.resolve(__dirname, "../frontend");
+const frontendDir = path.resolve(__dirname, "../WebsiteMuscleRice");
 app.use(express.static(frontendDir));
 app.get("/", (req, res) => {
   res.sendFile(path.join(frontendDir, "index.html"));
